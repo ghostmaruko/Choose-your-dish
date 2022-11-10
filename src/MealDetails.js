@@ -20,20 +20,12 @@ function MealDetails() {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        margin: 40,
-        fontFamily: "sans-serif",
-        alignItems: "center",
-      }}
-    >
-      <h1 style={{ color: "red" }}>{meal.strMeal}</h1>
-      <h2 style={{ color: "green" }}>{meal.strArea}</h2>
-      <h3 style={{ color: "green" }}>{meal.strCategory}</h3>
-      <h5 style={{ color: "black" }}>{meal.strInstructions}</h5>
-      <img src={meal.strMealThumb} />
+    <div className="container">
+      <h1 className="title">{meal.strMeal}</h1>
+      <h2 className="subTitle" >{meal.strArea}</h2>
+      <h3 className="subTitle2">{meal.strCategory}</h3>
+      <p className="paragraph">{meal.strInstructions}</p>
+      <img className="dishImg" src={meal.strMealThumb} />
     </div>
   );
 }

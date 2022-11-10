@@ -21,13 +21,20 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <input value={input} onChange={handleInput} />
-      <button onClick={getData}>SEARCH</button>
+    <div className="dishContainer">
+      <input
+        className="search"
+        placeholder="Search..."
+        value={input}
+        onChange={handleInput}
+      />
+      <button className="glow-on-hover" onClick={getData}>
+        SEARCH
+      </button>
       <div>
         {meal.map((dish) => (
           <h2
-            style={{ color: "red" }}
+            className="dish"
             onClick={() => navigate(`/mealdetails/${dish.idMeal}`)}
           >
             {dish.strMeal}
